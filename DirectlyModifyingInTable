@@ -1,0 +1,7 @@
+select rowid,a.* from table a;//这样可以直接在查询出的结果上面直接修改数据，不用使用update语句
+// This allows you to modify data directly from the query without using an update statement.
+
+select * from table for update; //这样可以直接在查询出来的结果上修改，但是在操作过程中，会导致锁表，其他人员不能进行update，delete操作，或者程式的
+//无法运行，所以，建议使用第一种方式修改表数据。
+//This allows you to modify data directly from the query without using an update sstatement,but druing the operation, the table will be 
+//locked,Other people can't update or delete operations and program maight not run,so the best way that you update table in the first way
